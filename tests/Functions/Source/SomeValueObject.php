@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Symplify\SymfonyPhpConfig\Tests\Functions\Source;
+namespace Rector\SymfonyPhpConfig\Tests\Functions\Source;
 
 final class SomeValueObject
 {

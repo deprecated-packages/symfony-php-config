@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Symplify\SymfonyPhpConfig;
+namespace Rector\SymfonyPhpConfig;
 
+use Rector\SymfonyPhpConfig\Reflection\ArgumentAndParameterFactory;
 use ReflectionClass;
-use Symfony\Component\DependencyInjection\Loader\Configurator\InlineServiceConfigurator;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ServicesConfigurator;
-use Symplify\SymfonyPhpConfig\Reflection\ArgumentAndParameterFactory;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\inline;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\inline_service;
+use Symfony\Component\DependencyInjection\Loader\Configurator\InlineServiceConfigurator;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ServicesConfigurator;
 
 function inline_argument_object(object $object, ServicesConfigurator $servicesConfigurator): ReferenceConfigurator
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Symplify\SymfonyPhpConfig\Tests\Functions;
+namespace Rector\SymfonyPhpConfig\Tests\Functions;
 
 use PHPStan\Type\UnionType;
+use Rector\Core\HttpKernel\RectorKernel;
+use Rector\SymfonyPhpConfig\Tests\Functions\Source\ServiceWithValueObject;
+use Rector\SymfonyPhpConfig\Tests\Functions\Source\WithType;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
-use Symplify\SymfonyPhpConfig\Tests\Functions\Source\ServiceWithValueObject;
-use Symplify\SymfonyPhpConfig\Tests\Functions\Source\WithType;
-use Symplify\SymfonyPhpConfig\Tests\HttpKernel\SymfonyPhpConfigKernel;
 
 final class ConfigFactoryNestedTest extends AbstractKernelTestCase
 {
     protected function setUp(): void
     {
-        $this->bootKernelWithConfigs(SymfonyPhpConfigKernel::class, [
+        $this->bootKernelWithConfigs(RectorKernel::class, [
             __DIR__ . '/config/config_with_nested_union_type_value_objects.php',
         ]);
     }

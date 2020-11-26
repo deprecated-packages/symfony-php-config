@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Symplify\SymfonyPhpConfig\Exception;
+namespace Rector\SymfonyPhpConfig\Exception;
 
 use Exception;
 

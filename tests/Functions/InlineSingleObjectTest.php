@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Symplify\SymfonyPhpConfig\Tests\Functions;
+namespace Rector\SymfonyPhpConfig\Tests\Functions;
 
 use Iterator;
 use PHPUnit\Framework\TestCase;
+use function Rector\SymfonyPhpConfig\inline_argument_object;
+use Rector\SymfonyPhpConfig\Tests\Functions\Source\SomeValueObject;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ServicesConfigurator;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use Symplify\SymfonyPhpConfig\Tests\Functions\Source\SomeValueObject;
-use function Symplify\SymfonyPhpConfig\inline_argument_object;
 
 final class InlineSingleObjectTest extends TestCase
 {
