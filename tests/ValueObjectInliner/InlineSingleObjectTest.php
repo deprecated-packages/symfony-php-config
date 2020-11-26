@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Rector\SymfonyPhpConfig\Tests\Functions;
+namespace Symplify\SymfonyPhpConfig\Tests\ValueObjectInliner;
 
 use Iterator;
 use PHPUnit\Framework\TestCase;
-use function Rector\SymfonyPhpConfig\inline_argument_object;
-use Rector\SymfonyPhpConfig\Tests\Functions\Source\SomeValueObject;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ReferenceConfigurator;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ServicesConfigurator;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use Symplify\SymfonyPhpConfig\Tests\ValueObjectInliner\Source\SomeValueObject;
+use Symplify\SymfonyPhpConfig\ValueObjectInliner;
 
 final class InlineSingleObjectTest extends TestCase
 {
@@ -23,7 +23,7 @@ final class InlineSingleObjectTest extends TestCase
     {
         $servicesConfigurator = $this->createServiceConfigurator();
 
-        $referenceConfigurator = inline_argument_object($valueObject, $servicesConfigurator);
+        $referenceConfigurator = ValueObjectInliner::inlineArgumentObject($valueObject, $servicesConfigurator);
 
         $this->assertInstanceOf(ReferenceConfigurator::class, $referenceConfigurator);
 
