@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rector\SymfonyPhpConfig\Reflection;
+namespace Symplify\SymfonyPhpConfig\Reflection;
 
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 

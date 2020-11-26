@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rector\SymfonyPhpConfig\Tests\Functions\Source;
+namespace Symplify\SymfonyPhpConfig\Tests\Functions\Source;
 
 use PHPStan\Type\Type;
 
